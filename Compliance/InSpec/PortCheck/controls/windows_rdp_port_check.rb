@@ -1,3 +1,7 @@
+control 'Windows instance check' do
+title 'RDP access'
+desc 'RDP port should not be open to the world'
+impact 0.9
 require 'rbconfig'
 is_windows = (RbConfig::CONFIG['host_os'] =~ /mswin|mingw|cygwin/)
 if is_windows
